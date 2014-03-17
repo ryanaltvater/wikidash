@@ -3,7 +3,7 @@
 /* ============================== */
 
 function loadArticles(){
-	var randomArticles = 'http://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=5&rnnamespace=0&format=json&callback=?';
+	var randomArticles = 'http://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=10&rnnamespace=0&format=json&callback=?';
 
 	$.getJSON(randomArticles, function(data){
 		$.each(data.query.random, function(i, article){
