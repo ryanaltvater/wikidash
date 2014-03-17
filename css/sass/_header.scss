@@ -1,0 +1,82 @@
+#header {
+	#logo,
+	#refresh {
+		@include rem(font-size, 24px);
+	}
+
+	#logo {
+		@include coda;
+		padding: 4px 0 2px;
+		width: 100%;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+
+		span {
+			color: #7c0529;
+		}
+	}
+
+	#back-to-top,
+	#back-to-top a,
+	#refresh,
+	#refresh button {
+		width: 48px;
+		height: 44px;
+	}
+
+	#back-to-top,
+	#refresh {
+		@include transition(all 0.15s);
+		position: absolute;
+		top: 0;
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			border: none;
+			background: transparent;
+			color: #fff;
+
+			&.spin {
+				@include transition(all 1s);
+				@include transform(rotate(-540deg));
+				-webkit-transform-origin:	50% 50%;
+				-ms-transform-origin:		50% 50%;
+				transform-origin:			50% 50%;
+			}
+		}
+	}
+
+	#back-to-top {
+		@include transition(all 0.25s);
+		@include rem(font-size, 30px);
+		left: 0;
+		opacity: 0;
+
+		@media (min-width: 768px) {
+			margin-left: 15px;
+		}
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			display: inline-block;
+			padding: 3px 7px;
+		}
+
+		&.show {
+			opacity: 1;
+		}
+	}
+
+	#refresh {
+		right: 0;
+
+		@media (min-width: 768px) {
+			margin-right: 15px;
+		}
+
+		button {
+			padding: 7px;
+		}
+	}
+}

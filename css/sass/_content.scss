@@ -1,0 +1,84 @@
+body {
+	@include rem(font-size, 14px);
+	font-family: "Arial", sans-serif;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#content {
+	article {
+		margin-bottom: 20px;
+
+		.title a,
+		.excerpt {
+			padding: 12px 15px 11px;
+		}
+
+		.title {
+			@include box-shadow(0 1px 0 #d60545);
+			@include rem(font-size, 18px);
+			@include coda;
+			background: #fd0752;
+			line-height: 1.2;
+
+			a {
+				display: block;
+				color: #fff;
+			}
+		}
+
+		.excerpt {
+			margin-top: 1px;
+			background: #fff;
+		}
+
+		.read-more,
+		.read-more a {
+			@include transition(all 0.15s);
+		}
+
+		.read-more {
+			@include box-shadow(0 1px 0 #bbb);
+			background: #ddd;
+
+			a {
+				@include coda;
+				display: block;
+				padding: 11px 0;
+				color: #bbb;
+				text-align: center;
+
+				&:first-of-type {
+					border-right: 1px solid #bbb;
+				}
+			}
+		}
+	}
+}
